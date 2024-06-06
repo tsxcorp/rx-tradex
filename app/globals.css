@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-DarkBlack {
+  background-color: #333;
+}
+.description {
+  color: rgb(120 120 120);
+}
+.description h4 {
+  padding-bottom: .75rem;
+  padding-top: .75rem;
+  color: #fff;
+  color: rgb(255 255 255);
+  font-size: 1.562rem;
+  line-height: 2rem;
+}
+.description p {
+  font-size: .938rem;
+  padding-bottom: .75rem;
+  padding-top: .75rem;
+}
+.description a {
+  color: #fff;
+  color: rgb(255 255 255 1);
+}
+.btn_thick_white {
+  border-radius: 3px;
+  border-width: 1px;
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  border-color: #333;
+  border-color: rgb(51 51 51/var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity));
+  font-family: Segoe UI,sans-serif;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  line-height: 1;
+  padding: .9375rem 1.5625rem;
+  --tw-text-opacity: 1;
+  color: #333;
+  color: rgb(51 51 51/var(--tw-text-opacity));
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1)
+}
+
+.btn_thick_white:hover {
+  background-color: #901c20;
+  background-color: rgb(144 28 32/var(--tw-bg-opacity));
+  border-color: #901c20;
+  border-color: rgb(144 28 32/var(--tw-border-opacity));
+  color: #fff;
+}
+
+.blog > * {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  text-align: justify;
+}
+.blog > h2 {
+  font-size: 1.938rem;
+}
+
+.news > * {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  text-align: justify;
+}
+.news > h2 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+}
+.news > h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #b91c1c;
+}
+.news > h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 255px;
+  background-color: #901c20;
+}
+.news > ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.blog > h3 {
+  font-size: 1.838rem;
+}
+
+.blog > h4 {
+  font-size: 1.562rem;
+}
+
+.blog .wp-block-image {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wp-block-image img {
+  width: 100%;
+}
+
+.blog a {
+  color: #b91c1c;
+}
+
+.blog a:hover {
+  color: #901c20;
+}
