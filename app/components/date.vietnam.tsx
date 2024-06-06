@@ -1,7 +1,7 @@
 import { parseISO, format } from 'date-fns';
-import vi from 'date-fns/locale/vi';
+import { vi } from 'date-fns/locale';
 
 export default function Date({ dateString } : any) {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, 'dd/MM/yyyy', {locale: vi})}</time>;
+  return <time dateTime={dateString}>{format(date, 'dd/MM/yyyy', { locale: vi })}</time>;
 }
