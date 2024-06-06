@@ -36,7 +36,7 @@ const Header = async ( { lang } : any ) => {
                             <Link href="/en" className="self-center">
                                 <Image src="/images/en.svg" alt="en" height="69" width="100" className="ml-2 w-5 align-bottom" />
                             </Link>
-                            <Link href="/" className="self-center">
+                            <Link href="/vi" className="self-center">
                                 <Image src="/images/vi.svg" alt="en" height="69" width="100" className="ml-2 w-5 align-bottom" />
                             </Link>
                         </div>

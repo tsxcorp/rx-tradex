@@ -7,7 +7,7 @@ const AboutUs = async ( props : any ) => {
   const lang = "vi";
 
   // Gọi data dịch từ file /dictionaries/vi.json
-  const file = await fs.readFile(process.cwd() + '/dictionaries/vi.json', 'utf8');
+  const file = await fs.readFile(process.cwd() + '/app/dictionaries/vi.json', 'utf8');
   const translate = JSON.parse(file);
 
   // Giới hạn gọi 6 trang/lần & lấy số ?page= trên URL

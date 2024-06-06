@@ -7,7 +7,7 @@ const AboutUs = async ( props : any ) => {
   const lang = "en";
 
   // Gọi data dịch từ file /dictionaries/vi.json
-  const file = await fs.readFile(process.cwd() + '/dictionaries/en.json', 'utf8');
+  const file = await fs.readFile(process.cwd() + '/app/dictionaries/en.json', 'utf8');
   const translate = JSON.parse(file);
 
   // // Call API gọi data của category
