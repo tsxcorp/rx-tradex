@@ -25,10 +25,10 @@ function NewList ( {lang, data, translate, totalPage, page} : any ) {
                         </a>
                     </h4>
                     <p className="text-[#8B8B8B] leading-none font-medium italic">
-                       {translate.Publish} <Date dateString={news.date} lang={lang}/>
+                       {translate.publish} <Date dateString={news.date} lang={lang}/>
                     </p>
                     <div className="text-[1.063rem] line-clamp-2 leading-[120%] text-gray-500" dangerouslySetInnerHTML={{__html: news.excerpt.rendered}} />
-                    <a href={`/${lang}/${news.slug}`} className="text-sm font-bold leading-none max-w-fit border-b border-solid mt-2 shrink-0 hover:text-[#a22701]">{translate.ReadMore}</a>
+                    <a href={`/${lang}/${news.slug}`} className="text-sm font-bold leading-none max-w-fit border-b border-solid mt-2 shrink-0 hover:text-[#a22701]">{translate.readMore}</a>
                 </div>
             </div>
         </div>

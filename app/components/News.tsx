@@ -12,7 +12,7 @@ function News ( { tranlaste, data }: any ) {
       />
       <h1 className="my-3 font-bold text-[1.8rem]">{data.title.rendered}</h1>
       <div className="justify-end flex flex-wrap border-b-2 items-center mb-2">
-        <div className="mr-2">{tranlaste.Share}: </div>
+        <div className="mr-2">{tranlaste.share}: </div>
         <a className="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition py-1 px-2 text-sm rounded-full text-white bg-red-700 hover:bg-red-900 hover:border-red-900" target="_blank" rel="noopener" href={`https://facebook.com/sharer/sharer.php?u=https://rx-vietnamshows.com${pathname}`} aria-label="Share on Facebook">
           <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4">
             <title>Facebook</title>

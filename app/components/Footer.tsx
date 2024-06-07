@@ -11,6 +11,7 @@ const Footer = async ( { lang }:any) => {
     const data = await menuUrl.json();
     const logo = data[0].acf.logo
     const events = data[0].acf.listEvent
+
   return (
     <footer className="w-full bg-DarkBlack">
         <div className="pt-[2.5rem] pb-5 relative">
@@ -25,13 +26,11 @@ const Footer = async ( { lang }:any) => {
                         </Link>
                     </div>
                     <div className="description">
-                        <p><Link href={`/${lang}`}>RX Tradex</Link> là đơn vị tổ chức triển lãm hàng đầu châu Á. Chúng tôi tự hào là thành viên của <Link href="https://www.rxglobal.com/" target='_blank'>RX</Link>, công ty tổ chức sự kiện hàng đầu thế giới chuyên mang đến những sự kiện cao cấp, chuyên sâu, kết nối người mua đến với các nhà cung cấp, đối tác kinh doanh chiến lược. Với quy mô toàn cầu hơn 400 sự kiện tại 22 quốc gia, phục vụ 43 lĩnh vực công nghiệp. Riêng tại Thái Lan và Việt Nam, chúng tôi tổ chức 20 triển lãm và hội nghị quốc tế uy tín.</p>
-                        <h4>38 năm thành công</h4>
-                        <p>Với 38 năm, <strong>RX Tradex</strong> đã và đang thiết lập hệ thống kết nối mạng lưới các doanh nghiệp đa dạng trong nhiều ngành công nghiệp, tối ưu bằng phương thức kết hợp các yếu tố <strong>Chiến lược sự kiện</strong>, <strong>Kiểm soát tài chính</strong>, <strong>Vận hành tinh gọn</strong> và <strong>Truyền thông tích hợp</strong>, chứng minh hiệu quả nhờ vào kinh nghiệm và sự kết nối.</p>
+                        <div className="" dangerouslySetInnerHTML={{__html: data[0].acf.footerInfo}} />
                     </div>
                     </div>
                     <div className="w-full lg:w-[29rem]">
-                        <p className="font-semibold text-[1.09375em] leading-[1.3125rem] text-[#787878] pb-[10px]">Liên Kết Với Các Triển Lãm</p>
+                        <p className="font-semibold text-[1.09375em] leading-[1.3125rem] text-[#787878] pb-[10px]">{data[0].acf.Heading.eventConnect}</p>
                         <div className="grid grid-cols-2 justify-items-start gap-x-10 gap-y-3">
                         {events?.map((event:any) => (
                             <Link href={`/${lang}/${event.eventURL}`} className="text-[#ECECEC] font-semibold text-[.8125em] leading-[1.3125rem]" key={event.eventName}>
@@ -41,25 +40,7 @@ const Footer = async ( { lang }:any) => {
                         </div>
                     </div>
                     <div className="max-w-[17rem] w-full">
-                        <p className="font-bold text-[1.09375em] leading-[1.3125rem] text-[#787878] pb-[10px]">Liên hệ với chúng tôi</p>
-                        <div className="flex flex-col gap-[.625rem] mb-[.625rem]">
-                            <p className="font-bold text-white text-[.9375rem] leading-[1.375rem]">Văn phòng Thái Lan</p>
-                            <p className="text-[#787878] text-[.9375rem] leading-[1.375rem]">Tầng 32, Tòa nhà Sathorn Nakorn, 100/68-69 North Sathon đường Silom, Bangrak, Băng Cốc 10500 Thái Lan.</p>
-                            <div className="text-[.875rem] text-white">
-                                <div className=""><span className="text-[#787878]">Điện thoại: </span> (+66) 2686 7299</div>
-                                <div className=""><span className="text-[#787878]">Hộp thư: </span> rtdxvn@rxtradex.com</div>
-                                <div className=""><span className="text-[#787878]">Trang web: </span> www.rxtradex.com</div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-[.625rem] mb-[.625rem]">
-                            <p className="font-bold text-white text-[.9375rem] leading-[1.375rem]">Văn phòng Việt Nam</p>
-                            <p className="text-[#787878] text-[.9375rem] leading-[1.375rem]">Tầng 2, Kova Center, 92G-92H Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
-                            <div className="text-[.875rem] text-white">
-                                <p className=""><span className="text-[#787878]">Điện thoại: </span> (+84) 28-6287-3355</p>
-                                <p className=""><span className="text-[#787878]">Hộp thư: </span> CustomerService@rxtradex.com</p>
-                                <p className=""><span className="text-[#787878]">Trang web: </span> rx-vietnamshows.com</p>
-                            </div>
-                        </div>
+                        <div className="" dangerouslySetInnerHTML={{__html: data[0].acf.footerContact}} />
                         <div className="mt-[.9375rem] flex flex-wrap gap-[1.125rem]">
                             <Link href="https://privacy.reedexpo.com/vt/cookie-policy.html" rel="noopener noreferrer nofollow" target="_blank" className="text-[.8125rem] leading-5 text-[#ECECEC]">Chính sách Cookie</Link><Link href="https://privacy.rxglobal.com/vt.html" rel="noopener noreferrer nofollow" target="_blank" className="text-[.8125rem] leading-5 text-[#ECECEC]">Điều khoản bảo mật</Link><Link href="https://www.reedtradex.vn/html/copyright_statement.html" rel="noopener noreferrer nofollow" target="_blank" className="text-[.8125rem] leading-5 text-[#ECECEC]">Điều khoản về bản quyền</Link><Link href="https://www.reedexhibitions.com/terms-conditions" rel="noopener noreferrer nofollow" target="_blank" className="text-[.8125rem] leading-5 text-[#ECECEC]">Terms &amp; Conditions</Link><Link href="https://www.reedtradex.vn/vn_site/index.html#" rel="noopener noreferrer nofollow" target="_blank" className="text-[.8125rem] leading-5 text-[#ECECEC]">Cookie Settings</Link>
                         </div>

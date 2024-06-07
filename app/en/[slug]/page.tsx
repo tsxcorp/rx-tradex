@@ -1,13 +1,15 @@
 import News from "@/app/components/News";
 import Widget from "@/app/components/Widget";
-import { promises as fs } from 'fs';
 
 const AboutUs : any = async ( { params } : any ) => {
   const lang = "en";
 
-  // Gọi data dịch từ file /dictionaries/vi.json
-  const file = await fs.readFile(process.cwd() + '/app/dictionaries/en.json', 'utf8');
-  const translate = JSON.parse(file);
+  // Call API gọi data Heading ở trang Header Header& Footer
+  const headingUrl = await fetch(`${process.env.URL_BE}pages?_fields=id,title,acf&slug=header-footer&lang=${lang}&acf_format=standard`, { next: { revalidate: 3600 } });
+  if (!headingUrl.ok) {
+    throw new Error('Failed to fetch data')
+  }
+  const newHeadingUrl = await headingUrl.json();
 
   // Call API gọi data trang News
   const newUrl = await fetch(`${process.env.URL_BE}posts?_fields=id,title,slug,date,excerpt,content,featured_media,featured_image_url,acf&slug=${params.slug}`, { next: { revalidate: 3600 } });
@@ -36,7 +38,7 @@ const AboutUs : any = async ( { params } : any ) => {
       "name": "RX Tradex Vietnam",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://admin.rx-vietnamshows.com/wp-content/uploads/2024/05/logo-rxtradex-white.webp"
+        "url": "https://media.rx-vietnamshows.com/wp-content/uploads/2024/06/07101138/logo-rxtradex-white.webp"
       }
     },
     "datePublished": `${news.date}+07:00`
@@ -70,15 +72,15 @@ const AboutUs : any = async ( { params } : any ) => {
             <div className="flex flex-col lg:flex-row py-10 gap-[3.125rem]">
               <div className="w-full lg:w-[70%]">
                 <News
-                  tranlaste = {translate}
+                  tranlaste = {newHeadingUrl[0].acf.Heading}
                   data = {news}
                 />
               </div>
               <Widget
                 lang = {lang}
                 data = {newPageUrl}
-                translate = {translate}
-                url = {translate.CategoryURL}
+                translate = {newHeadingUrl[0].acf.Heading}
+                url = {newHeadingUrl[0].acf.Heading.CategoryURL}
               />
             </div>
           </div>

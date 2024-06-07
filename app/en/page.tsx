@@ -31,7 +31,9 @@ const Home = async () => {
         buttonLink ={buttonLink}
       />
 
-      <HomeEventList />
+      <HomeEventList
+        lang = "en"
+      />
     </main>
   );
 }

@@ -32,7 +32,9 @@ return (
       buttonLink ={buttonLink}
     />
 
-    <HomeEventList />
+    <HomeEventList
+      lang = "vi"
+    />
   </main>
 );
 }
