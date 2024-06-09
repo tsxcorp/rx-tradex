@@ -7,7 +7,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "RX Tradex nhà tổ chức triển lãm hàng đầu ASEAN",
+  title: "METALEX Việt Nam 2024 | RX Tradex",
   description: "RX Tradex là thành viên của RX, tổ chức tổ chức sự kiện hàng đầu thế giới",
 };
 

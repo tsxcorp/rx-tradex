@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const VME = async () => {
    const lang = "vi"
-   const eventName = "metalex-viet-nam"
+   const eventName = "metalex-vietnam"
 
    // Call API gọi data Event
   const eventUrl = await fetch(`${process.env.URL_BE}events?_fields=id,title,slug,acf&lang=${lang}&slug=${eventName}&acf_format=standard`, { next: { revalidate: 3600 } });

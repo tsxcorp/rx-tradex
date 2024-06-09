@@ -8,7 +8,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "RX Tradex nhà tổ chức triển lãm hàng đầu ASEAN",
-  description: "RX Tradex là thành viên của RX, tổ chức tổ chức sự kiện hàng đầu thế giới",
+  description: "RX Tradex là một thành viên thuộc RX Global, đơn vị tổ chức sự kiện hàng đầu thế giới, tổ chức hơn 400 sự kiện tại 22 quốc gia khác nhau, phục vụ 43 lĩnh vực công nghiệp.",
 };
 
 export default function RootLayout({
