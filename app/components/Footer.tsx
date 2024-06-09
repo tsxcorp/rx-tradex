@@ -33,7 +33,7 @@ const Footer = async ( { lang }:any) => {
                         <p className="font-semibold text-[1.09375em] leading-[1.3125rem] text-[#787878] pb-[10px]">{data[0].acf.Heading.eventConnect}</p>
                         <div className="grid grid-cols-2 justify-items-start gap-x-10 gap-y-3">
                         {events?.map((event:any) => (
-                            <Link href={`/${lang}/${event.eventURL}`} className="text-[#ECECEC] font-semibold text-[.8125em] leading-[1.3125rem]" key={event.eventName}>
+                            <Link href={`/${lang}/exhibitions/${event.eventURL}`} className="text-[#ECECEC] font-semibold text-[.8125em] leading-[1.3125rem]" key={event.eventName}>
                                 {event.eventName}
                             </Link>
                         ))}

@@ -1,5 +1,5 @@
-const NEV = async () => {
-return (
+const VME = async () => {
+  return (
    <main className="mt-24 lg:mt-[127px]">
       <iframe
          src="https://reg.rx-vietnamshows.com/nev-pre-regis"
@@ -9,4 +9,4 @@ return (
   )
 }
 
-export default NEV
+export default VME

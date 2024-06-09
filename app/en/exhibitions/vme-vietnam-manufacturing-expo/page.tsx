@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const VME = async () => {
-   const lang = "vi";
+   const lang = "en";
    const cate = 14
 
    // Call API gọi data trang News

@@ -126,3 +126,10 @@
 .blog a:hover {
   color: #901c20;
 }
+
+.registor > * {
+  padding-bottom: 0.5rem;
+}
+.registor > h1 {
+  font-weight: bold;
+}

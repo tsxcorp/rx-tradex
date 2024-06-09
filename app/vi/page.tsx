@@ -3,6 +3,8 @@ import HomeConnect from "../components/HomeConnect";
 import HomeEventList from "../components/HomeEventList";
 
 const Home = async () => {
+  const lang = "vi"
+
   // Call API gọi data trang Home
   const homeUrl = await fetch(`${process.env.URL_BE}pages?_fields=id,title,acf&slug=trang-chu&acf_format=standard`, { next: { revalidate: 3600 } });
   if (!homeUrl.ok) {
@@ -33,7 +35,7 @@ return (
     />
 
     <HomeEventList
-      lang = "vi"
+      lang = {lang}
     />
   </main>
 );
