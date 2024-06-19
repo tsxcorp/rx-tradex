@@ -1,6 +1,5 @@
 import News from "@/app/components/News";
 import Widget from "@/app/components/Widget";
-import { promises as fs } from 'fs';
 
 const AboutUs : any = async ( { params } : any ) => {
   const lang = "vi";
@@ -25,7 +24,7 @@ const AboutUs : any = async ( { params } : any ) => {
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://rx-vietnamshows.com${params.slug}`
+      "@id": `https://rx-vietnamshows.com/vi/${params.slug}`
     },
     "headline": news.title.rendered,
     "image": news.featured_image_url,  
@@ -81,7 +80,6 @@ const AboutUs : any = async ( { params } : any ) => {
                 lang = {lang}
                 data = {newPageUrl}
                 translate = {newHeadingUrl[0].acf.Heading}
-                url = {newHeadingUrl[0].acf.Heading.CategoryURL}
               />
             </div>
           </div>

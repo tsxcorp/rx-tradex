@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NewCategory = async ( {lang,url} : any ) => {
     // Call API gọi data Menu
     const menuUrl = await fetch(`${process.env.URL_BE}categories?_fields=id,name,slug,count&lang=${lang}&orderby=id`, { next: { revalidate: 3600 } });

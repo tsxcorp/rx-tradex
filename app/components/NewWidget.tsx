@@ -8,7 +8,7 @@ function NewWidget( {data, lang} : any ) {
     const thumb = data[0].featured_image_url
   return (
     <div className="flex flex-col gap-[0.625rem] pb-4 border-b border-Gray border-solid mt-4">
-        <a href="/vi/tin-tuc/waste-and-recycling-expo-viet-nam/u-rac-huu-co-khong-mui" className="">
+        <a href={`/${lang}/${slug}`} className="">
             <div className="flex items-center justify-center xl:w-[21rem] xl:h-[11.5rem] overflow-hidden">
                 <Image src={thumb} width="750" height="422" alt="RX-image" />
             </div>

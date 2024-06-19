@@ -1,7 +1,7 @@
 import NewCategory from "@/app/components/NewCategory";
 import NewWidget from "@/app/components/NewWidget";
 
-function Widget( { translate,lang,data,url } : any ) {
+function Widget( { translate,lang,data } : any ) {
   return (
     <div className="w-full lg:w-[30%] h-screen sticky top-36">
         <div className="border-b-2 border-solid border-slate-300">
@@ -14,7 +14,7 @@ function Widget( { translate,lang,data,url } : any ) {
         </div>
         <NewCategory
             lang = {lang}
-            url = {url}
+            url = {translate.categoryURL}
         />
         <div className="border-b-2 border-solid border-slate-300 mt-3">
             <div className="relative inline-block">

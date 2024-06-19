@@ -72,7 +72,7 @@
 }
 .news > h2 {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.5em;
   padding-bottom: 15px;
@@ -97,9 +97,22 @@
   max-width: 255px;
   background-color: #901c20;
 }
+
+.news > h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .news > ul {
   list-style: disc;
   padding-left: 25px;
+}
+
+.news > p a {
+  color: #901c20;
+}
+.news > p a:hover {
+  text-decoration: underline;
 }
 
 .blog > h3 {
