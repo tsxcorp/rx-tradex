@@ -48,7 +48,7 @@ function Navbar( { lang, data } : any) {
                                 <span>{aboutUs}</span>
                             </Link>
                         </li>
-                        <li className="hover-item group text-white relative cursor-pointer hover:bg-red-800 h-full">
+                        {/* <li className="hover-item group text-white relative cursor-pointer hover:bg-red-800 h-full">
                             <span className="w-full h-full px-10 flex items-center">{lang === "vi" ? "Triển Lãm" : "Exhibitions"}</span>
                             <ul className="mega__menu hover-item absolute z-10 top-full left-0 bg-DarkBlack w-max capitalize opacity-0 invisible group-hover:opacity-100 group-hover:visible">
                                 {events?.map((event:any) => (
@@ -56,6 +56,31 @@ function Navbar( { lang, data } : any) {
                                         <Link href={`/${lang}/exhibitions/${event.eventURL}`} className="inline-block w-full h-full px-4 py-[0.625rem]">{event.eventName}</Link>
                                     </li>
                                 ))}
+                            </ul>
+                        </li> */}
+                        <li className="hover-item group text-white relative cursor-pointer hover:bg-red-800 h-full">
+                            <span className="w-full h-full px-10 flex items-center">{lang === "vi" ? "Triển Lãm" : "Exhibitions"}</span>
+                            <ul className="mega__menu hover-item absolute z-10 top-full left-0 bg-DarkBlack w-max capitalize opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                <li className="hover-item hover:bg-red-800">
+                                    <Link href="https://www.vme-expo.com/" className="inline-block w-full h-full px-4 py-[0.625rem]">
+                                        Vietnam Manufacturing Expo
+                                    </Link>
+                                </li>
+                                <li className="hover-item hover:bg-red-800">
+                                    <Link href="https://www.nepconvietnam.com/" className="inline-block w-full h-full px-4 py-[0.625rem]">
+                                        NEPCON Việt Nam
+                                    </Link>
+                                </li>
+                                <li className="hover-item hover:bg-red-800">
+                                    <Link href="https://www.metalexvietnam.com/" className="inline-block w-full h-full px-4 py-[0.625rem]">
+                                        METALEX Việt Nam
+                                    </Link>
+                                </li>
+                                <li className="hover-item hover:bg-red-800">
+                                    <Link href="https://www.wrv-expo.com/" className="inline-block w-full h-full px-4 py-[0.625rem]">
+                                        Waste And Recycling Việt Nam
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="hover-item group text-white relative cursor-pointer hover:bg-red-800 h-full">
